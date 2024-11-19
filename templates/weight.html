@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <title>Unit Converter</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{{url_for('index')}}">Home</a></li>
+                <li><a href="{{url_for('length')}}">Length</a></li>
+                <li><a href="{{url_for('weight')}}" class="active">Weight</a></li>
+             </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <h1 class="form-title">Weigth</h1>
+        <form action="/weight" method="post">
+            <label for="value">Enter Weight to Convert</label>
+            <input type="number" name="value" id="value" placeholder="e.g., 70" required>
+        
+            <label for="from_unit">Unit to Convert From</label>
+            <input type="text" name="from_unit" id="from_unit" placeholder="e.g., kg" required>
+        
+            <label for="to_unit">Unit to Convert To</label>
+            <input type="text" name="unit" id="to_unit" placeholder="e.g., lbs" required>
+        
+            <button type="submit" id="sub">Convert</button>
+        </form>
+        
+    </div>
+    <style>
+    </style>
+    {% if operate %}
+    <div class="results">
+        <h2>Result of your calculation</h2><br>
+        <span>{{value}}{{from_unit}} = {{operate}}{{unit}}</span><br><br>
+        <a href="{{url_for('weight')}}"><button id="btn">Reset</button></a>
+    </div><br>
+    {% endif %}
+</html>

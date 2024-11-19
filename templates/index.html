@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{{url_for('index')}}" class="active">Home</a></li>
+                <li><a href="{{url_for('length')}}">Length</a></li>
+                <li><a href="{{url_for('weight')}}">Weight</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <img src="{{url_for('static', filename='download.jpg')}}" style="background-color: #000; width: 50px; ">
+        <h1 style="text-align: center;">Unit Converter</h1><br><br><br>
+        <p style="text-align: center;">Welcome to my Custome Unit converter project</p>
+    </div>
+</body>
+</html>

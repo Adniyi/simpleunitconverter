@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #c9d6ff;
+}
+
+header {
+    background: #fff;
+    padding: 1.5rem;
+    box-shadow: 0 20px 35px rgba(0, 0, 1, 0.5);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+header a {
+    text-decoration: none;
+    color: #000;
+}
+
+
+
+
+nav {
+    /* background: #fff; */
+    padding: 1rem;
+    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+}
+
+nav ul {
+    list-style: none;
+    display:flex;
+    justify-content: space-around;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000;
+    padding: 0.5rem 1rem;
+    transition: background 0.3s, color 0.3s;
+}
+
+nav a:hover {
+    color: #4a90e2; /* Color of the underline */
+    
+}
+
+nav a:hover::after {
+    color: #4a90e2; /* Color of the underline */
+    display: block;
+    width: 100%; /* Full width of the link */
+    height: 2px; /* Thickness of the underline */
+   
+    position: absolute; /* Position it relative to the link */
+    left: 0; /* Align to the left */
+    bottom: 3px; /* Space from the text */
+    border-radius: 5px;
+    
+}
+
+nav a.active {
+    background: #fff; /* Active background color */
+    color: #4a90e2; /* Active text color */
+    border-radius: 5px; /* Optional: rounded corners for active link */
+    padding: 15px ; /* Adjust padding for vertical space */
+    position: relative; /* Required for pseudo-element positioning */
+    text-decoration: none; /* Remove default underline */
+}
+
+nav a.active::after {
+    content: ''; /* Create a pseudo-element */
+    display: block;
+    width: 100%; /* Full width of the link */
+    height: 2px; /* Thickness of the underline */
+    background: #4a90e2; /* Color of the underline */
+    position: absolute; /* Position it relative to the link */
+    left: 0; /* Align to the left */
+    bottom: 3px; /* Space from the text */
+    border-radius: 5px; /* Optional: rounded corners for the underline */
+}
+
+
+
+.container {
+    background: #fff;
+    width: 450px;
+    padding: 1.1rem;
+    margin: 50px auto;
+    border-radius: 10px;
+    box-shadow: 0 20px 35px rgba(0, 0, 1, 0.5);
+}
+
+.form-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+form {
+    margin: 0 2rem;
+}
+
+input {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #757575;
+    padding: 8px 0;
+    margin-bottom: 1px;
+}
+
+input:focus {
+    outline: none;
+    border-bottom: 2px solid hsl(327, 90%, 28%);
+}
+form {
+    margin: 2rem 0;
+}
+
+label {
+    display: block; /* Make labels block elements */
+    margin-bottom: 0.5rem; /* Space between label and input */
+    color: #757575; /* Label color */
+}
+
+input {
+    width: 100%; /* Full width */
+    padding: 10px; /* Inner padding for comfort */
+    border: 1px solid #ccc; /* Border for input */
+    border-radius: 5px; /* Rounded corners */
+    margin-bottom: 1rem; /* Space between inputs */
+}
+
+#sub {
+    background: #4a90e2; /* Button color */
+    color: white; /* Button text color */
+    border: none; /* No border */
+    padding: 10px; /* Inner padding */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer on hover */
+}
+
+#sub:hover {
+    background: #357ABD; /* Darker button color on hover */
+}
+
+
+
+
+label {
+    color: #757575;
+    display: block;
+    margin-bottom: 0.1rem;
+}
+
+#sub {
+    font-size: 1.1rem;
+    padding: 8px 0;
+    border-radius: 5px;
+    border: none;
+    width: 100%;
+    background: rgb(125, 125, 235);
+    color: #fff;
+    cursor: pointer;
+}
+
+#sub:hover {
+    background: #07001f;
+}
+
+.results {
+    background: #fff;
+    width: 450px;
+    padding: 1.5rem;
+    margin: 50px auto;
+    border-radius: 10px;
+    box-shadow: 0 20px 35px rgba(0, 0, 1, 0.5);
+    text-align: center;
+}
+
+#btn {
+    font-size: 1.1rem;
+    padding: 8px 0;
+    border-radius: 5px;
+    border: none;
+    width: 100%;
+    background: rgb(125, 125, 235);
+    color: #fff;
+    cursor: pointer;
+}
+
+#btn:hover {
+    background: #07001f;
+}
